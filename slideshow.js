@@ -27,7 +27,7 @@ var Slideshow = function (options) {
     this.itemCount = this.items.length;
     this.itemWidth = this.options.itemWidth || 85;
 
-    this.navigation = options.navigation || $('.navigation');
+    this.navigation = this.options.navigation || $('.navigation');
     this.left = this.navigation.find('.left');
     this.right = this.navigation.find('.right');
 
