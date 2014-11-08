@@ -28,6 +28,10 @@ Accepted Options
   - The actual slideshow
   - Type: ```jQuery DOM element```
   - Default: ```$("#slideshow");```
+* navigation
+  - The navigation container
+  - Type: ```jQuery DOM element```
+  - Default: ```$(".navigation");```
 * startIndex
   - The starting elements index
   - Type: ```integer```
