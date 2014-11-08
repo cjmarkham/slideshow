@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" />
+
+  <style>
+    body {
+      margin-top: 150px;
+    }
+
+    #slideshow-wrapper {
+      position: relative;
+      width: 450px;
+      margin: 0 auto;
+    }
+
+    #slideshow-inner {
+      width: 425px;
+      overflow: hidden;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    #slideshow {
+      width: 6000px;
+      margin: 0 auto;
+      font-size: 0;
+    }
+
+    img {
+      background: #ddd;
+      width: 75px;
+      height: 75px;
+      border-radius: 100%;
+      cursor: pointer;
+    }
+
+    li.active > img {
+      background: #eee;
+    }
+
+    .navigation {
+      position: absolute;
+      width: 500px;
+      height: 100%;
+      left: 50%;
+      margin-left: -250px;
+    }
+
+    .left, .right {
+      position: absolute;
+      top: 20%;
+    }
+
+    .left {
+      left: 0;
+    }
+
+    .right {
+      right: 0;
+    }
+
+    .center {
+      position: absolute;
+      border-left: 1px solid #eee;
+      border-right: 1px solid #eee;
+      width: 80px;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      margin-left: -40px;
+    }
+
+    #captions {
+      width: 6000px;
+      margin-top: 60px;
+    }
+
+    #captions li {
+      width: 425px;
+      text-align: center;
+      display: none;
+    }
+
+    #captions li.active {
+      display: block;
+    }
+
+  </style>
+</head>
+<body class="container">
+
+  <div class="center"></div>
+
+  <div id="slideshow-wrapper">
+    <nav class="navigation">
+      <a href="javascript:void(0)" class="left">
+        Left
+      </a>
+      <a href="javascript:void(0)" class="right">
+        Right
+      </a>
+    </nav>
+
+    <div id="slideshow-inner">
+
+      <ul id="slideshow" class="list-unstyled list-inline">
+        <li>
+          <img src="" alt="" />
+        </li>
+        <li>
+          <img src="" alt="" />
+        </li>
+        <li class="active">
+          <img src="" alt="" />
+        </li>
+        <li>
+          <img src="" alt="" />
+        </li>
+        <li>
+          <img src="" alt="" />
+        </li>
+        <li>
+          <img src="" alt="" />
+        </li>
+        <li>
+          <img src="" alt="" />
+        </li>
+        <li>
+          <img src="" alt="" />
+        </li>
+      </ul>
+
+      <ul id="captions" class="list-inline list-unstyled">
+        <li>
+          Caption 1
+        </li>
+        <li>
+          Caption 2
+        </li>
+        <li class="active">
+          Caption 3
+        </li>
+        <li>
+          Caption 4
+        </li>
+        <li>
+          Caption 5
+        </li>
+        <li>
+          Caption 6
+        </li>
+        <li>
+          Caption 7
+        </li>
+        <li>
+          Caption 8
+        </li>
+      </ul>
+  </div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="slideshow.js"></script>
+
+<script>
+  $("#slideshow-wrapper").slideshow({
+    speed: 300,
+    onSlideEnd: function (index) {
+      $("#captions li.active").removeClass("active")
+      $("#captions li").eq(index).addClass("active");
+    }
+  });
+</script>
+</body>
+</html>
