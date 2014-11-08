@@ -19,7 +19,7 @@ var Slideshow = function (options) {
       return false;
     }
 
-    this.currentMargin = this.slideshow.css("margin-left").toInt();
+    this.currentMargin = parseInt(this.slideshow.css("margin-left"), 10);
 
     this.speed = this.options.speed || 300;
 
@@ -49,7 +49,7 @@ var Slideshow = function (options) {
   };
 
   this.updateMargin = function () {
-    self.currentMargin = self.slideshow.css("margin-left").toInt();
+    self.currentMargin = parseInt(self.slideshow.css("margin-left"), 10);
     console.log(self.currentMargin, self.index);
   };
 
@@ -131,8 +131,4 @@ $.fn.slideshow = function (options) {
     var slideshow = new Slideshow(options);
     return slideshow.init();
   });
-};
-
-String.prototype.toInt = function () {
-  return parseInt(this, 10);
 };
