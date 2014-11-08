@@ -50,7 +50,6 @@ var Slideshow = function (options) {
 
   this.updateMargin = function () {
     self.currentMargin = self.slideshow.css("margin-left").toInt();
-    console.log(self.currentMargin, self.index);
   };
 
   this.slideLeft = function () {
