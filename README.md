@@ -1,8 +1,5 @@
-jQuery Slideshow plugin
-=========
-
 Initialization
-===
+=
 
 To get started, simply call the ```slideshow``` method on a jQuery DOM element.
 
@@ -11,7 +8,7 @@ $("#element").slideshow();
 ```
 
 Options
-===
+=
 
 Options can be passed into the function as an object
 
@@ -24,28 +21,28 @@ Accepted Options
 =
 
 * container
-  The wrapper for the slideshow
-  ```jQuery DOM element```
-  ```default: $("#slideshow-inner");```
+  - The wrapper for the slideshow
+  - Type: ```jQuery DOM element```
+  - Default:```$("#slideshow-inner");```
 * slideshow
-  The actual slideshow
-  ```jQuery DOM element```
-  ```default: $("#slideshow");```
+  - The actual slideshow
+  - Type: ```jQuery DOM element```
+  - Default: ```$("#slideshow");```
 * startIndex
-  The starting elements index
-  ```integer```
-  ```default: slideshow li with class of active```
+  - The starting elements index
+  - Type: ```integer```
+  - Default: ```slideshow li with class of active```
 * speed
-  Changes the slide speed
-  ```integer```
-  ```default: 300```
+  - Changes the slide speed
+  - Type: ```integer```
+  - Default: ```300```
 * itemWidth
-  The width of the li's within the slideshow
-  ```integer```
-  ```default: 85```
+  - The width of the li's within the slideshow
+  - Type: ```integer```
+  - Default: ```85```
 * onSlideStart
-  A function which is invoked before the slideshow starts to animate
-  ```function```
+  - A function which is invoked before the slideshow starts to animate
+  - Type: ```function```
 * onSlideEnd
-  A function which is invoked when the slideshow has finished animating
-  ```function```
+  - A function which is invoked when the slideshow has finished animating
+  - Type: ```function```
